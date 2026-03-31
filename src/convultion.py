@@ -2,7 +2,7 @@ import numpy as np
 from proccesing import reflect_index
 
 
-def convultion(image: np.ndarray, kernles: np.ndarray) -> np.ndarray:
+def convultion(image: np.ndarray, kernel: np.ndarray) -> np.ndarray:
     height, width = image.shape
     kernel_half = kernles.shape[0] // 2
     picture = np.zeros((height, width), dtype=np.float32)

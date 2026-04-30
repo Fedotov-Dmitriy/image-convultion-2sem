@@ -1,5 +1,5 @@
 import os
-
+from typing import Callable
 from kernels import kernels
 from proccesing import modes
 
@@ -22,7 +22,7 @@ def picture_output() -> str:
     return os.path.join(folder_path, pictures[number])
 
 
-def select() -> function:
+def select() -> Callable:
     choice = input(
         "Выберите режим обработки края:\n1. reflect\n2. replicate\n3. wrap\n"
     )

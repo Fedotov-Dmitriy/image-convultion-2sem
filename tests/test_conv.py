@@ -1,6 +1,6 @@
 from PIL import Image
 import pytest
-from convolution import convolution
+from src.convolution import convolution
 from kernels import kernels
 import numpy as np
 from proccesing import reflect_index

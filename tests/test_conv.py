@@ -1,9 +1,9 @@
 from PIL import Image
 import pytest
 from src.convolution import convolution
-from kernels import kernels
+from src.kernels import kernels
 import numpy as np
-from proccesing import reflect_index
+from src.proccesing import reflect_index
 import os
 
 BASE_DIR = os.path.dirname(__file__)

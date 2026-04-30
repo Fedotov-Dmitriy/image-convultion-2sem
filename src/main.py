@@ -1,5 +1,5 @@
 from kernels import kernels
-from convolution import convolution
+from src.convolution import convolution
 from PIL import Image
 from numpy import array
 from cli import kernels_output, picture_output, select

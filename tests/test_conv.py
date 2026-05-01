@@ -7,7 +7,7 @@ from src.proccesing import reflect_index
 import os
 
 BASE_DIR = os.path.dirname(__file__)
-img_path = os.path.join(BASE_DIR, "..", "input", "night_city.jpg")
+img_path = os.path.join(BASE_DIR, "..", "input", "night_city.png")
 
 
 @pytest.mark.parametrize("kernel_name", kernels.keys())

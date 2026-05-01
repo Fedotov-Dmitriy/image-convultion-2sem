@@ -19,8 +19,8 @@ def convolution(image: np.ndarray, kernel: np.ndarray, pad: Callable) -> np.ndar
     col_index = pad(col_index[..., np.newaxis, np.newaxis] + kernel_col_index, width)
 
     matrix = np.sum(
-        kernel[np.newaxis, np.newaxis, ..., np.newaxis]
-        * image[row_index, col_index, :],
-        axis=(2, 3),
+        kernel[np.newaxis, np.newaxis, ..., np.newaxis].astype(np.float32)
+        * image[row_index, col_index, :].astype(np.float32),
+        axis=(2, 3),dtype=np.float32
     )
     return np.clip(matrix, 0, 255).astype(np.uint8)

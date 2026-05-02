@@ -2,7 +2,7 @@ import numpy as np
 from typing import Callable
 
 
-def convolution(image: np.ndarray, kernel: np.ndarray, pad: Callable) -> np.ndarray:
+def convolution(image: np.ndarray, kernel: np.ndarray, pad: Callable[[int, int], np.ndarray]) -> np.ndarray:
     height = image.shape[0]
     width = image.shape[1]
     col_range = np.arange(width)

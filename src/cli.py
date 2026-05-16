@@ -1,8 +1,8 @@
 import os
 from typing import Callable
-from src.kernels import kernels
-from src.proccesing import modes
-
+from kernels import kernels
+from proccesing import modes
+from PIL import Image
 
 def kernels_output() -> str:
     print("Выберите номер ядра свертки")
@@ -27,3 +27,9 @@ def select() -> Callable:
         "Выберите режим обработки края:\n1. reflect\n2. replicate\n3. wrap\n"
     )
     return modes[choice]
+
+def grayscale(img:Image.Image) -> Image.Image:
+    choice = input("Выберите цвет изображения:\n 1.grayscale\n 2.RGB")
+    if choice == "1":
+        return img.convert("L")
+    return img.convert("RGB")

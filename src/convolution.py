@@ -2,7 +2,7 @@ import numpy as np
 from typing import Callable
 
 
-def convolution(image: np.ndarray, kernel: np.ndarray, pad: Callable) -> np.ndarray:
+def convolution(image: np.ndarray, kernel: np.ndarray, pad: Callable[[int, int], np.ndarray]) -> np.ndarray:
     if image.size == 0:
         raise ValueError("Изображение не должно быть пустыми")
     if kernel.size == 0:

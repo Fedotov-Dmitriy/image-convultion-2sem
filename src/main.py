@@ -1,8 +1,8 @@
 from kernels import kernels
 from convolution import convolution
-from PIL import Image,UnidentifiedImageError
+from PIL import Image, UnidentifiedImageError
 from numpy import array
-from cli import kernels_output, picture_output, select,grayscale
+from cli import kernels_output, picture_output, select, grayscale
 
 
 def main() -> None:

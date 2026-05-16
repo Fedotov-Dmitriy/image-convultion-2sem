@@ -1,8 +1,13 @@
+import numpy as np
+from typing import Callable
+
+
 def convolution(image: np.ndarray, kernel: np.ndarray, pad: Callable) -> np.ndarray:
-    if image.size == 0 or kernel.size == 0:
-        raise ValueError("Изображение должно быть пустыми")
+    if image.size == 0:
+        raise ValueError("Изображение не должно быть пустыми")
     if kernel.size == 0:
-        raise ValueError("Ядро свертки не должно быть пустым")
+        raise ValueError("ядро свертки не должно быть пустым")
+
     if kernel.shape[0] % 2 == 0 or kernel.shape[1] % 2 == 0:
         raise ValueError("Размер ядра должен быть нечетным")
 

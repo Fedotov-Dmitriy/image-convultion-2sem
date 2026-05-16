@@ -1,7 +1,7 @@
 import os
 from typing import Callable
-from kernels import kernels
-from proccesing import modes
+from src.kernels import kernels
+from src.proccesing import modes
 from PIL import Image
 
 

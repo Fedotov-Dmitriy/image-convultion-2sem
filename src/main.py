@@ -7,10 +7,10 @@ from src.cli import kernels_output, picture_output, select, grayscale
 
 def main() -> None:
     try:
-        img = Image.open(picture_output())
-        img = grayscale(img)
+        opened_img = Image.open(picture_output())
+        processed_img = grayscale(opened_img)
 
-        result = convolution(array(img), kernels[kernels_output()], select())
+        result = convolution(array(processed_img), kernels[kernels_output()], select())
 
         new_img = Image.fromarray(result)
         new_img.show()
@@ -26,7 +26,6 @@ def main() -> None:
 
     except KeyboardInterrupt:
         print("\nПрограмма остановлена пользователем")
-
 
 if __name__ == "__main__":
     main()

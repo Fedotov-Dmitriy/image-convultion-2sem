@@ -3,11 +3,18 @@ import sys
 from collections import defaultdict
 import matplotlib.pyplot as plt
 import numpy as np
+from typing import DefaultDict
 
 with open(sys.argv[1] if len(sys.argv) > 1 else "results.json") as f:
     data = json.load(f)
 
-times = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: defaultdict(list))))
+TimesDict = DefaultDict[
+    str, DefaultDict[str, DefaultDict[str, DefaultDict[str, list[float]]]]
+]
+
+times: TimesDict = defaultdict(
+    lambda: defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+)
 
 for b in data["benchmarks"]:
     p = b["params"]

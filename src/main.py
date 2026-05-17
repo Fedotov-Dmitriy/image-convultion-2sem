@@ -27,5 +27,6 @@ def main() -> None:
     except KeyboardInterrupt:
         print("\nПрограмма остановлена пользователем")
 
+
 if __name__ == "__main__":
     main()

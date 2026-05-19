@@ -2,9 +2,8 @@ import numpy as np
 
 
 def reflect_index(index: int, size: int) -> np.ndarray:
-    return np.where(
-        index < 0, -index, np.where(index >= size, 2 * (size - 1) - index, index)
-    )
+    index = index % (2 * size)
+    return np.where(index >= size, 2 * size - 1 - index, index)
 
 
 def replicate(index: int, size: int) -> np.ndarray:
